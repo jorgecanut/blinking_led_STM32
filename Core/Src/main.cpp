@@ -12,7 +12,8 @@ int main(void) {
 #endif
 
     DigitalOutput yellow_led(PE1);
-    PIN::start();
+    Pin::start();
+    //COmentario de prueba
 }
 
 void Error_Handler(void) {
