@@ -11,15 +11,8 @@ int main(void) {
     SharedMemory::start();
 #endif
 
-    DigitalOutput led_on(PB1);
-    STLIB::start();
-
-    Time::register_low_precision_alarm(5, [&]() { led_on.toggle(); 
-    });
-
-    while (1) {
-        STLIB::update();
-    }
+    DigitalOutput yellow_led(PE1);
+    PIN::start();
 }
 
 void Error_Handler(void) {
