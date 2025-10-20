@@ -24,3 +24,12 @@ To flash and debug, you should be outside the container, and use the [Cortex-Deb
 
 ## Notes
 If you are going to develop OUTSIDE the container, you MUST change `template-project.code-workspace` file after project creation if you DON'T have STLIB on ../ST-LIB relative path. This template is intended for you to develop always inside the container, so you should not be concerned about this.
+
+
+
+### SETUP PARA FUTURO #####
+git submodule init && git submodule update
+Asegurar que ninja y cmake estan instalados
+Hacer un virtual env con python, activarlo e instalar requirments.txt
+
+No liarla con git entre maquinas (.gitignore al generated_metadata.cpp)
