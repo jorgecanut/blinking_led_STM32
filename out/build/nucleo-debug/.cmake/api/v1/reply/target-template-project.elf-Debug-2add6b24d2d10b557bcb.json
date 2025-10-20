@@ -1,0 +1,874 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "template-project.elf"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_options",
+			"target_link_libraries",
+			"target_compile_options",
+			"target_compile_definitions",
+			"target_include_directories",
+			"set_target_properties"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 68,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 151,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 98,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 87,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 121,
+				"parent" : 0
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 85,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mcpu=cortex-m7"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfpu=fpv5-d16"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfloat-abi=hard"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-specs=nosys.specs"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-exceptions"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-psabi"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-w"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HSE_VALUE=8000000"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "NUCLEO"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "STM32H723xx"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/Core/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/netif/ppp"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/apps"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/priv"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/prot"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/netif"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/net"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/stdc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system/arch"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components/lan8742"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/App"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/Target"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_LOW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_HIGH"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mcpu=cortex-m7"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfpu=fpv5-d16"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfloat-abi=hard"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-specs=nosys.specs"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-exceptions"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-psabi"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HSE_VALUE=8000000"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "NUCLEO"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "STM32H723xx"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/Core/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/netif/ppp"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/apps"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/priv"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/prot"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/netif"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/net"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/stdc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system/arch"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components/lan8742"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/App"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/Target"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_LOW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_HIGH"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				11
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mcpu=cortex-m7"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfpu=fpv5-d16"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mfloat-abi=hard"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-specs=nosys.specs"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-exceptions"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-psabi"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wpedantic"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Werror"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-use-cxa-atexit"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-fno-rtti"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "HSE_VALUE=8000000"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "NUCLEO"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "STM32H723xx"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/Core/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Device/ST/STM32H7xx/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/CMSIS/Include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/STM32H7xx_HAL_Driver/Inc/Legacy"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/netif/ppp"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/apps"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/priv"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/lwip/prot"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/netif"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/arpa"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/net"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/posix/sys"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/src/include/compat/stdc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Middlewares/Third_Party/LwIP/system/arch"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Drivers/BSP/Components/lan8742"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/App"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/LWIP/Target"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_LOW"
+				},
+				{
+					"backtrace" : 6,
+					"path" : "/home/jorge/hyperloop/blinking_led_STM32/deps/ST-LIB/Inc/ST-LIB_HIGH"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					7
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				12,
+				13,
+				14,
+				15
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "st-lib::@90d414206c4afe2f6762"
+		}
+	],
+	"id" : "template-project.elf::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-T/home/jorge/hyperloop/blinking_led_STM32/STM32H723ZGTX_FLASH.ld",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-mcpu=cortex-m7",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-mthumb",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-mfpu=fpv5-d16",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-mfloat-abi=hard",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-specs=nosys.specs",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lc",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lm",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lnosys",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-Wl,-Map=template-project.map,--cref",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-Wl,--gc-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "deps/ST-LIB/libst-lib.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "template-project.elf",
+	"nameOnDisk" : "template-project.elf",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				8,
+				9,
+				10
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				3,
+				4,
+				5,
+				6,
+				7,
+				12,
+				13,
+				14,
+				15
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				11
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/main.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/stm32h7xx_hal_conf.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/stm32h7xx_it.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/stm32h7xx_hal_msp.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/stm32h7xx_it.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/syscalls.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/sysmem.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/system_stm32h7xx.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/Code_generation/Packet_generation/DataTemplate.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/Code_generation/Packet_generation/OrderTemplate.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Core/Inc/Code_generation/Packet_generation/ProtectionsTemplate.hpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "Core/Startup/startup_stm32h723zgtx.s",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "Core/Src/Runes/Pins.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "Core/Src/Runes/Runes.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "Core/Src/Runes/generated_metadata.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 2,
+			"path" : "Core/Src/main.cpp",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "EXECUTABLE"
+}

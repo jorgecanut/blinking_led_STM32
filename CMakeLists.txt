@@ -6,13 +6,13 @@ set(STLIB_DIR ${CMAKE_CURRENT_LIST_DIR}/deps/ST-LIB)
 
 set(VENV_PYTHON "${CMAKE_SOURCE_DIR}/virtual/bin/python")
 
+# Fake target to always run metadata generation
 add_custom_target(
     my_custom_target_that_always_runs ALL
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/_tmp.h
 )
 add_custom_command(
-    OUTPUT
-        ${CMAKE_CURRENT_BINARY_DIR}/_tmp.h  # fake! ensure we run! 
+    OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/_tmp.h
     COMMAND ${VENV_PYTHON} ${CMAKE_SOURCE_DIR}/tools/generate_binary_metadata.py
 )
 
@@ -87,9 +87,7 @@ set_target_properties(${EXECUTABLE} PROPERTIES CXX_STANDARD 20 CXX_STANDARD_REQU
 target_compile_definitions(${EXECUTABLE} PRIVATE
   $<$<BOOL:${CMAKE_CROSSCOMPILING}>:USE_HAL_DRIVER>
   $<$<BOOL:${CMAKE_CROSSCOMPILING}>:STM32H723xx>
-
   $<$<NOT:$<BOOL:${CMAKE_CROSSCOMPILING}>>:SIM_ON>
-
   $<$<BOOL:${USE_ETHERNET}>:STLIB_ETH>
   $<IF:$<BOOL:${TARGET_NUCLEO}>,NUCLEO,BOARD>
   $<IF:$<BOOL:${TARGET_NUCLEO}>,HSE_VALUE=8000000,HSE_VALUE=25000000>
@@ -117,7 +115,6 @@ target_compile_options(${EXECUTABLE} PRIVATE
   $<$<COMPILE_LANGUAGE:CXX>:-fno-rtti>
 )
 
-# REMEMBER TO CHANGE `.vscode/C_cpp_properties.json` TO MATCH THIS LIST
 target_include_directories(${EXECUTABLE} PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/Core/Inc
   $<$<BOOL:${CMAKE_CROSSCOMPILING}>:${STLIB_DIR}/Drivers/CMSIS/Device/ST/STM32H7xx/Include>
@@ -161,19 +158,44 @@ target_link_options(${EXECUTABLE} PRIVATE
   $<$<BOOL:${CMAKE_CROSSCOMPILING}>:-Wl,-Map=${PROJECT_NAME}.map,--cref>
   $<$<BOOL:${CMAKE_CROSSCOMPILING}>:-Wl,--gc-sections>
 )
+
+# === POST_BUILD: generate .bin and create symlinks ===
+add_custom_command(TARGET ${EXECUTABLE} POST_BUILD
+    COMMAND ${CMAKE_OBJCOPY} -O binary
+            ${CMAKE_CURRENT_BINARY_DIR}/${EXECUTABLE}
+            ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.bin
+    COMMENT "Generating ${PROJECT_NAME}.bin from ELF"
+)
+
+# Optional: print memory usage
+add_custom_command(TARGET ${EXECUTABLE} POST_BUILD
+    COMMAND ${CMAKE_SIZE_UTIL} ${CMAKE_CURRENT_BINARY_DIR}/${EXECUTABLE}
+    COMMENT "Showing memory usage"
+)
+
 if (PROJECT_IS_TOP_LEVEL)
-    # Create symlink to compile_commands.json for IDE to pick it up
-    execute_process(
-        COMMAND ${CMAKE_COMMAND} -E create_symlink
-            ${CMAKE_BINARY_DIR}/compile_commands.json
-            ${CMAKE_CURRENT_SOURCE_DIR}/compile_commands.json
-    )
-    # Create symlink to executable for IDE to pick it up
+    # Symlink ELF for IDE / flashing
     add_custom_command(
         TARGET ${EXECUTABLE}
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_BINARY_DIR}/${EXECUTABLE}
-        ${CMAKE_CURRENT_SOURCE_DIR}/out/build/latest.elf
+            ${CMAKE_BINARY_DIR}/${EXECUTABLE}
+            ${CMAKE_CURRENT_SOURCE_DIR}/out/build/latest.elf
+    )
+
+    # Symlink BIN for IDE / flashing
+    add_custom_command(
+        TARGET ${EXECUTABLE}
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E create_symlink
+            ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.bin
+            ${CMAKE_CURRENT_SOURCE_DIR}/out/build/latest.bin
+    )
+
+    # Symlink compile_commands.json
+    execute_process(
+        COMMAND ${CMAKE_COMMAND} -E create_symlink
+            ${CMAKE_BINARY_DIR}/compile_commands.json
+            ${CMAKE_CURRENT_SOURCE_DIR}/compile_commands.json
     )
 endif()
